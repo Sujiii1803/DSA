@@ -5,21 +5,19 @@ public class ValidAnagram {
 
 
         //------------Using frequency--------
-        String s1=s.replaceAll("//s","").toLowerCase();
-        String s2=t.replaceAll("//s","").toLowerCase();
-
-        if(s1.length() != s2.length()) return false;
+        if( s.length() != t.length() ){
+            return false;
+        }
 
         int count[] = new int[26];
 
-        for(int i = 0; i < s1.length(); i++){
-            count[s1.charAt(i)-'a']++;
-            count[s2.charAt(i)-'a']--;
+        for( int i = 0; i < s.length() ; i++ ){
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
         }
 
-        for(int c : count){
-            if(c != 0)
-            {
+        for( int c : count ){
+            if( c != 0 ){
                 return false;
             }
         }
