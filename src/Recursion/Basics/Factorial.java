@@ -1,19 +1,19 @@
-package Recursion;
+package Recursion.Basics;
 
 import java.util.Scanner;
 
-public class Reverse {
-    public static int rev( int n,int r){
+public class Factorial {
+    public static int fact( int n ){
         if( n == 0 ){
-            return r;
+            return 1;
         }
-        return rev( n / 10, r * 10 + n % 10);
+        return n * fact( n - 1 );
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter n : ");
         int n = sc.nextInt();
-        System.out.print(rev(n,0));
+        System.out.print(fact(n));
     }
 }
