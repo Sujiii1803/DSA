@@ -32,8 +32,8 @@ public class LinkedListDemo {
         if( head.data == target ){
             return i;
         }
-        i = i + 1;
-        return search( head.next,target,i);
+
+        return search( head.next,target,i+1);
 
     }
     public static Node Reverse( Node head ){
