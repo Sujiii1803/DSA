@@ -1,8 +1,7 @@
-package sorting;
+package sorting.Algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Arrays;
 
 
@@ -18,8 +17,8 @@ public class MergeSort {
     }
     public static void merge( int[] arr, int low, int mid, int high){
         List<Integer> list = new ArrayList<>();
-        int left =  low;
-        int right = mid+1;
+        int left =  low; // points to left half
+        int right = mid+1; // points to the right half
 
         while( left <= mid && right <= high){
             if( arr[left] <= arr[right]){
